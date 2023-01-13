@@ -113,7 +113,7 @@ const Docker = {
                 --env GIT_PRIVATE_TOKEN="${gitPrivateToken}" \
                 --env CHOWN_FILES_TO="${chownFilesTo}" \
                 ${sshAgent ? '--env SSH_AUTH_SOCK=/ssh-agent' : ''} \
-                --volume "$/home/runner/.upmconfig.toml:/etc/.upmconfig.toml:z" \
+                --volume "$/home/runner/.upmconfig.toml:/github/home/.upmconfig.toml:z" \
                 --volume "${githubHome}:/root:z" \
                 --volume "${githubWorkflow}:/github/workflow:z" \
                 --volume "${workspace}:/github/workspace:z" \
