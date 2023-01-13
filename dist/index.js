@@ -301,6 +301,7 @@ const Docker = {
                 --env CHOWN_FILES_TO="${chownFilesTo}" \
                 ${sshAgent ? '--env SSH_AUTH_SOCK=/ssh-agent' : ''} \
                 --volume "${githubHome}:/root:z" \
+                --volume "/home/runner/.upmconfig.toml:/etc/.upmconfig.toml:z" \
                 --volume "${githubWorkflow}:/github/workflow:z" \
                 --volume "${workspace}:/github/workspace:z" \
                 --volume "${actionFolder}/steps:/steps:z" \
